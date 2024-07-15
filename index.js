@@ -13,7 +13,7 @@ const app = express();
 const server = http.createServer(app)
 const io = new Server(server, {
     cors: {
-        origin: "*", // NOTE: change this to your website url.
+        origin: "https://atlas-game.vercel.app", // NOTE: change this to your website url.
         methods: ["GET", "POST"]
     }
 });
