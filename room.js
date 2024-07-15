@@ -61,8 +61,7 @@ class Room {
         this.getNextPlayer = () => {
             this.currPlayer = (this.currPlayer + 1) % this.livePlayers.length;
             clearInterval(this.timerId)
-            console.log(this.timerId, ' timer closed')
-            this.timeRemaining = playerTimeInMinutes*60
+            this.timeRemaining = playerTimeInMinutes*60 + 2
         };
         this.addPlayer = (newPlayer) => {
             this.allPlayers.push(newPlayer);
@@ -120,7 +119,7 @@ class Room {
         this.currPlayer = -1; // index of current player
         this.currWord = "a";
         this.roomLog = [];
-        this.timeRemaining = playerTimeInMinutes * 60
+        this.timeRemaining = playerTimeInMinutes * 60 + 2
         this.timerId = null;
 
         this.addPlayer(creator);
